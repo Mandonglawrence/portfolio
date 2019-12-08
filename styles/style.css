@@ -23,10 +23,10 @@ img{
 .fixed{
     position: fixed;
     width: 100%;
-    background: linear-gradient(35deg, rgb(114, 60, 175),rgb(34, 13, 13),rgb(114, 60, 175));
+    background:rgb(231, 198, 174);
     padding:20px 0 20px 0;
     z-index: 1000;
-    color: blanchedalmond;
+    color: black;
     border-radius: 0 0 1px 1px;
     box-shadow: rgb(0, 0, 0) 5px 2px 5px 2px ;
 }
@@ -42,13 +42,14 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     display: inline-block;
-    color: blanchedalmond;
+    color: black;
     padding: 14px;
     transition: ease-in-out 0.4s;
 }
 nav ul li a:hover{
     background: rgba(110, 30, 30, 0.2);
     margin-top: 8px;
+     
 }
 .container{
     margin:17px;
@@ -78,8 +79,10 @@ footer{
     margin-bottom: 15px;
     box-shadow: rgb(0, 0, 0) 5px 2px 5px 2px ;
     padding: 25px;
-    background: rgb(231, 198, 174);
+    /* background: rgb(231, 198, 174); */
+    background: rgb(90, 8, 90);
     border-radius: 12px 0 0 12px;
+    color: #fff;
    
 }
 .summary h2{
@@ -92,4 +95,65 @@ footer{
     background: rgb(102, 102, 231);
     border-radius: 12px;
     color: #fff;
+}
+/* tablets and ipads portrait
+screen btw 768px and 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .fixed{
+       display: grid;
+       grid-template-columns: 1fr 4fr 1fr;
+    }
+    .up{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    nav{
+        grid-column:2/3;
+        grid-row: 1/2;
+        text-align: center;
+        padding-left: 120px;
+    
+    }
+    ul li{
+        float: left;
+    }
+    .profile{
+        display: grid;
+        grid-template-columns: 4fr 2fr;
+        padding-left: 10%;
+        padding-right: 25%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .profile h2{
+        height: 80%;
+        padding-top: 60px;
+        padding-right: 45px;
+        
+    }
+    .profile h2::before{
+        content: '';
+        height: 100%;
+        width: 88px;
+        background: crimson;
+        position: relative;
+    }
+    .container{
+        margin-top: 70px;
+    }
+    .summary h2{
+        width: 30%;
+    }
+    .summary{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #abt-me{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .up h4{
+        padding-left: 22px;
+    }
 }
